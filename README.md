@@ -44,6 +44,34 @@ After building, run the executable:
 ### 5. Extending the Boilerplate
 
 You can add your own logic to `main.c` or create new files as needed. Use the input functions for safe and consistent user input.
+For example, to use this boilerplate for your Capstone Project, create new file such as `calculator.c`
+
+```sh
+code calculator.c
+```
+To compile and run it, use the `make` command as above
+
+```sh
+make calculator
+```
+
+
+### 6. Publishing Your Project
+Once you're satisfied with your project, you can publish it on GitHub.
+Steps to publish:
+1. Ensure your project is complete and tested.
+2. Commit all changes:
+```sh
+git add .
+git commit -m "Final version ready for publishing"
+```
+3. Push to your forked repository:
+```sh
+git push origin main
+```
+### 7 Sharing Your project link
+To share your repository, click the "Code" button on your repository page and copy the URL provided.
+Share the link on the Group
 
 ---
 
