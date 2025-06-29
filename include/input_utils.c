@@ -2,15 +2,19 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+typedef char* string;
 
-void get_string(const char *question, char *buffer, size_t size) {
+string get_string(const char *question) {
+    static char buffer[256];
     printf("%s", question);
-    if (fgets(buffer, size, stdin)) {
+    if (fgets(buffer, sizeof(buffer), stdin)) {
         size_t len = strlen(buffer);
         if (len > 0 && buffer[len - 1] == '\n') {
             buffer[len - 1] = '\0';
         }
+        return buffer;
     }
+    return NULL;
 }
 
 int get_int(const char *question) {

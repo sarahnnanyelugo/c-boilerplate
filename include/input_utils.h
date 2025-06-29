@@ -4,8 +4,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stddef.h>
-
-void get_string(const char *question, char *buffer, size_t size);
+#include <string.h>
+typedef char* string;
+// Returns a pointer to buffer containing the input string.
+string get_string(const char *question);
 int get_int(const char *question);
 float get_float(const char *question);
 double get_double(const char *question);
