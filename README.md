@@ -15,20 +15,16 @@ Replace `YOUR-USERNAME` with your GitHub username.
 
 ### 2. Build the Project
 
-You must compile both `main.c` and `input_utils.c` together, since the input functions are implemented separately from your main program.
-
-#### Using gcc
-
-```sh
-gcc main.c input_utils.c -o myprogram
-```
-
-#### Using make
-
 If a `Makefile` is provided, simply run:
 
 ```sh
 make
+```
+
+You can also build a specific executable (for example, `main`) with:
+
+```sh
+make main
 ```
 
 ### 3. Run the Program
@@ -36,7 +32,7 @@ make
 After building, run the executable:
 
 ```sh
-./myprogram
+./main
 ```
 
 ### 4. Project Structure
