@@ -2,17 +2,24 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h> 
+
 typedef char* string;
 
 string get_string(const char *question) {
-    static char buffer[256];
+    char temp[256];
     printf("%s", question);
-    if (fgets(buffer, sizeof(buffer), stdin)) {
-        size_t len = strlen(buffer);
-        if (len > 0 && buffer[len - 1] == '\n') {
-            buffer[len - 1] = '\0';
+    if (fgets(temp, sizeof(temp), stdin)) {
+        size_t len = strlen(temp);
+        if (len > 0 && temp[len - 1] == '\n') {
+            temp[len - 1] = '\0';
+            len--;
         }
-        return buffer;
+        char *buffer = malloc(len + 1);
+        if (buffer) {
+            strcpy(buffer, temp);
+            return buffer;
+        }
     }
     return NULL;
 }
